@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Bouldering</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        function ResetForm() {
+            document.getElementById("errorUserName").innerHTML = " "
+            document.getElementById("errorPassword").innerHTML = " ";
+            document.getElementById("errorPassword1").innerHTML = " ";
+            document.getElementById("errorMail").innerHTML = "";
+            document.getElementById("errorFirstName").innerHTML = "";
+            document.getElementById("errorLastName").innerHTML = "";
+            document.getElementById("errorPhone").innerHTML = "";
+        }
+       
+    </script>
+</head>
+<body style="background-color:white; text-align:right;">
+    <div>
+
+        <style>
+        body {
+            background-image: url("images/לוגו הכי מדהים.jpg");
+            height: 750px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #a6a6a6;
+        }
+    </style>
+                    <div>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                        </asp:ContentPlaceHolder>
+                    </div>
+        <div class="navbar" style="text-align:right; font-size:30px; color:azure; float:right; direction:rtl">
+            <a href="Home.aspx">דף הבית</a>
+                <a href="Registration.aspx">הרשמה</a>
+                <a href="Login.aspx">כניסה</a>
+                <a href="Characters.aspx">דמויות</a>
+            <a href="Plot.aspx">כל העונות</a>
+            <a href="Sgame.aspx">טריוויה</a>
+                <a href="Logout.aspx">יציאה</a>
+                <a href="UserDetails.aspx">נתוני משתמש</a> 
+                <a href="UpdateUD.aspx">עדכן פרטים אישיים</a>       
+                <a id="ManagerPageRef" runat="server" href="AdminPage.aspx"> דף מנהלים</a>
+            
+        
+            <p style="font-size:15px; position:static; text-align:left; float:left">שלום <%=Session["Login"] %></p>
+            <br />
+             <p style="font-size:15px; position:static; text-align:left; float:left"> <% Response.Write("מונה כניסות: " + Application["counter"]); %></p>
+            </div>
+                    </div>
+                   
+                    <div style="color:azure">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+                        </asp:ContentPlaceHolder>
+                    </div>          
+
+        <div style="clear: both;"> </div>
+</body>
+</html>

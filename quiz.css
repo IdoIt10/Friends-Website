@@ -1,0 +1,57 @@
+body {
+    font-family: Sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.button {
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    float: right;
+    background-color: #99ccff;
+    margin: 0 2px 0 2px;
+    cursor: pointer;
+}
+    .button a {
+        text-decoration: none;
+        color: black;
+        line-height: 15px;
+    }
+#container {
+    width: 65%;
+    margin: 70px auto;
+    padding: 50px 100px;
+    background-color: #004d4d;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 40px 0 darkblue;
+}
+ul 
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 500px;
+}
+    ul li {
+        box-shadow: 0 0 10px 0 darkblue;
+        background: black;
+        width: 200px;
+        margin: 10px;
+        padding: 5px 10px;
+        display: inline-block;
+        border-radius: 3px;
+    }
+#prev 
+{
+    display:none;
+}
+#start 
+{
+    display:none;
+    width: 100px;
+}
+input[type="radio"]{
+    cursor: pointer;
+}
